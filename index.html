@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        button{
+            cursor: pointer;
+        }
+        .wrapper{
+            min-width: 250px;
+            max-width: 600px;
+            margin-inline: auto;
+            padding-top: 50px;
+        }
+        /* input div */
+        .input_div{
+            width: 100%;
+            display: flex;
+            border: 1px solid;
+            /* padding-left: 10px; */
+        }
+        .input_div input{
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 0 12px;
+        }
+        .input_div #inpBtn{
+            background: tomato;
+            color: #fff;
+            border: none;
+            padding: 10px 12px;
+        }
+        #myTaskList{
+            width: 100%;
+            padding-top: 20px;
+            margin-inline: auto;
+        }
+        #myTaskList li{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            padding: 5px 20px;
+            cursor: pointer;
+            transition: all .33s ease-in-out;
+            /* border: 1px solid; */
+            box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+            margin-top: 8px;
+        }
+        #myTaskList li > input{
+            width: 80%;
+            border: none;
+            outline: none;
+            padding: 0 12px;
+            cursor: pointer;
+        }
+        /* delete btn */
+        #myTaskList li > .actionDiv .deleteBtn{
+            /* width: 100px; */
+            background: tomato;
+            color: #fff;
+            border: none;
+            padding: 10px 12px;
+        }
+        /* edit btn */
+        #myTaskList li > .actionDiv .editBtn{
+            /* width: 100px; */
+            background: rgb(76, 120, 10);
+            color: #fff;
+            border: none;
+            padding: 10px 12px;
+        }
+        .complete{
+            text-decoration: line-through;
+            color: #7b7676;
+        }
+        .complete::before{
+            content: '';
+            height: 14px;
+            width: 7px;
+            border-right: 2px solid green;
+            border-bottom: 2px solid green;
+            transform: rotate(45deg);
+            position: absolute;
+            left: 0;
+        }
+        /* update div */
+        /* .update_div{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            border: 1px solid;
+        }
+        .update_div input{
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 0 12px;
+        }
+        .update_div #updateBtn{
+            background: tomato;
+            color: #fff;
+            border: none;
+            padding: 10px 12px;
+        } */
+        
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="input_div">
+            <input type="text" id="inp" placeholder="Add Task...">
+            <button id="inpBtn">Add</button>
+        </div>
+    
+        <!--* tasks list -->
+        <ul id="myTaskList">
+            <!-- <li class="complete">php learn <button>x</button> </li> -->
+        </ul>
+    </div>
+
+    <!-- edit input -->
+    <!-- <div class="update_div">
+        <input type="text" id="update_inp" placeholder="Update Task...">
+        <button id="updateBtn">Update</button>
+    </div> -->
+
+
+    
+</body>
+    <script src="./script.js"></script>
+</html>
