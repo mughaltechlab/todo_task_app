@@ -42,7 +42,7 @@ function addElement(input_val){
     listArr.forEach((e,i) => {
         unique = document.createElement('div');
         unique.textContent = e;
-        unique.setAttribute('id',i);
+        // unique.setAttribute('id',i);
         console.log(unique);
         // taskInput.value =  e;
     });
@@ -72,7 +72,7 @@ function addElement(input_val){
 
 
         const uniqueDiv = e.target.parentElement.parentElement.children[0];
-        updateId = uniqueDiv.getAttribute('id');
+        updateId = e.target.parentElement.parentElement.getAttribute('id');
 
 
         check = listArr.includes(uniqueDiv.innerHTML);
@@ -106,24 +106,11 @@ inpBtn.addEventListener('click',()=>{
             console.log('exists : ' + inp.value);
             console.log('id : ' + updateId);
             listArr[updateId] = inp.value;
-
-            // get all list 
-            getLists = document.querySelectorAll('li');
-            // console.log(getLists[updateId].children[0].textContent);
-            getLists[updateId].children[0].textContent = listArr[updateId];
+            
+            // select li by id
+            document.getElementById(updateId).children[0].innerHTML = listArr[updateId] ;
+            // console.log(a);
             inp.value = '';
-            // console.log(updateId);
-            // getLists.forEach((el,i)=>{
-            //     console.log(el);
-            // });
-            // getLists[updateId];
-
-
-            // if () {
-                
-            // } else {
-                
-            // }
             
             check = false;
 
