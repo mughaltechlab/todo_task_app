@@ -83,6 +83,8 @@ function addElement(input_val){
         
         if (btnText == 'Edit') {
             inp.value = uniqueDiv.textContent;
+            inp.focus();
+
         }
     });
     // !-------------------------------------------------------------------------
